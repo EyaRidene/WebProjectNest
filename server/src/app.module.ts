@@ -14,6 +14,8 @@ import {CartModule} from "./cart/cart.module";
 import {CartProductModule} from "./cart-product/cart-product.module";
 import {OrderModule} from "./order/order.module";
 import {CommentModule} from "./comment/comment.module";
+import { MailingModule } from './mailing/mailing.module';
+import {MailerModule} from "@nestjs-modules/mailer";
 
 
 @Module({
@@ -31,6 +33,17 @@ import {CommentModule} from "./comment/comment.module";
       ConfigModule.forRoot(),
       ServeStaticModule.forRoot({
           rootPath: path.resolve(__dirname, 'static'),
+      }),
+      MailerModule.forRoot({
+          transport: {
+              host: 'eya.ridene21@gmail.com',
+              port: 465,
+              secure: true,
+              auth: {
+                  user: 'Eya Ridene',
+                  pass: 'eya211101',
+              },
+          },
       }),
   ],
   controllers: [

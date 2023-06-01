@@ -4,6 +4,7 @@ import {JwtModule} from "@nestjs/jwt";
 import {jwtConstants} from "./constants";
 import {AuthService} from "./auth.service";
 import {AuthController} from "./auth.controller";
+import {MailingService} from "../mailing/mailing.service";
 
 
 
@@ -16,7 +17,7 @@ import {AuthController} from "./auth.controller";
         }),
     ],
     providers: [
-        AuthService,
+        AuthService, MailingService,
     ],
     controllers: [
         AuthController,

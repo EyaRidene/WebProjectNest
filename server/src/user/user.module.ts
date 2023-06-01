@@ -15,9 +15,7 @@ import {CartModule} from "../cart/cart.module";
         UserService,
         ...UserProviders,
     ],
-    controllers: [
-        UserController,
-    ],
+  controllers: [UserController],
     exports: [
         UserService,
     ]
