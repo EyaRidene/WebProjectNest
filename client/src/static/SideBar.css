@@ -1,0 +1,13 @@
+
+.sidebar {
+    width: 250px;
+    float: left;
+}
+
+.category {
+    margin-bottom: 25px;
+}
+
+.category-list {
+    font-size: 20px;
+}
